@@ -365,6 +365,66 @@ script.js:7 sdfs
 script.js:7 sdfss
 script.js:7 sdfssd
 5script.js:7 sdfssdf
+
+<h2> keyup и keydown - нажатие и отпускание клвишы</h2>
+text.addEventListener('keyup', logger)
+text.addEventListener('keydown', logger)
+
+<h2> РАБОТА С ПОЛОЗКОМ (ДИАПАЗОНОМ)</h2>
+const range = document.getElementById('range')
+const span = document.getElementById('range-span')
+
+
+//создаем функцию клика
+const logger = function(event) {
+   console.dir(event.type);
+   span.textContent = event.target.value
+    }
+    
+  range.addEventListener('input', logger)
+  range.c('change', logger)
+
+  ===
+  Так же можно вешать событития на элементы напрямую (то есть без создания лишних переменных):
+  document.getElementById('range').addEventListener('change', logger)
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM построен');
+    //раньше использовалась вместо атрибуту defer
+    //Атрибут defer указывает браузеру отложить выполнение скрипта до тех пор, пока не будет завершен разбор HTML-документа. Это позволяет браузеру продолжать отображать содержимое страницы без задержек из-за ожидания скрипта
+  ====
+    window.onbeforeunload = function () {
+        return 'Вы хотите уйти со страницы?'
+      }
+
+<> описаный выше метод раньше любили вставить для предупреждения при уходе из окна или страницы. Сейчас его блокируют все современные браузеры. Сейчас это выражается в появлении окна ПЕРЕЗАГРУЗИТЬ САЙТ <br> Изменения могут не сохраниться.</strong>
+
+===<h2>РАБОТО СО ССЫЛКАМИ</h2>
+
+//Пример кода:
+
+//работа со ссылками
+
+const link = document.querySelector('a')
+link.addEventListener('click', function(event) {
+  event.preventDefault()
+console.log('клик по ссылке')
+})
+
+//ink.addEventListener('click', function(event) {
+    event.preventDefault() - позволяет заблокировать переход на страницу при нажатии на ссылку. Только в консоли появится "4script.js:6 клик по ссылке"
+
+    ===БЛОКИРОВКА ОТКРЫТИЯ МЕНЮ ПРАВОЙ МЫШЬЮ
+
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault()
+        console.log('Где меню?')
+===<STRONG>ВСПЛЫТИЕ И ПЕРЕХВАТ</STRONG>
+
+
+
 </pre>
 
 
