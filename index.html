@@ -1,0 +1,430 @@
+<pre>/
+==<h2>КОМАНДЫ ДЛЯ РАБОТЫ С GIT</h2> ==
+<li>git init folder-name — создает репоизторий в папке folder-name. <strong> У файлов в папке появляется значок "U"</strong></li>
+<li>git add <путь до файла> — изменить статус файла на отслеживаемый
+    git add . — добавить все файлы в отслеживаемые. <strong> После удачного применения появляется буква "А"</strong>
+    git remote add origin «url git» — добавить удалённый репозиторий (с сокр. именем origin) с указанным URL</li>
+<li>git commit -a -m  - сохранение КОммита</li>
+<li>git remote добавляет origin https://github.com/mister-project/book_JS.git - пришивает локальный репозиторий к удаленному на GIY HUB (берется вся сторока на GIT HUB)</li>
+innerHTML - свойство элемента, меняющее содержание + отзывчивое на верстку
+11:58 Создание элементов с нуля
+//создание
+const newElem = document.createElement('li')
+//занесение текста в новый элемент
+newElem.textContent = 'step 6'
+//присвоение класса новому элементу
+newElem.classList.add('elem')
+//добавление нового элемента в список
+lists[1].append(newElem)
+
+13:15 Еще 3 интересных метода
+14;16 ==insertAdjacentText==
+//достаем из верстки заголовок (title) по id и присваиваем переременной title
+
+const title = document.getElementById('title')
+
+// записываем в верстку через новую переменную с использованием метода 'insertAdjacentText' новые строки для вставки со
+всех сторон от title:
+
+title.insertAdjacentText('beforebegin', 'beforebegin')
+title.insertAdjacentText('afterend', 'afterend')
+//15;15
+title.insertAdjacentText('afterbegin', 'afterbegin ')
+title.insertAdjacentText('beforeend', ' beforeend ')
+
+16:10 ===insertAdjacentElement===
+
+title.insertAdjacentElement('beforebegin', elems[0])
+title.insertAdjacentElement('afterend', elems[1])
+
+title.insertAdjacentElement('afterbegin', elems[2])
+title.insertAdjacentElement('beforeend', elems[3])
+====insertAdjacentHTML===
+
+title.insertAdjacentHTML('beforebegin', '<span>step 1</span>')
+title.insertAdjacentHTML('afterend', '<span>step 2</span>')
+
+title.insertAdjacentHTML('afterbegin', '<span>step 3</span>')
+title.insertAdjacentHTML('beforeend', '<span>step 4</span>')
+
+18:50
+
+17:44
+
+Устаревшие методы:
+"appenChild(elem[1])" - перенос элемента (современный метод - "append" - новый метод дает возможость добавить сразу
+несколько
+элементов, так же - возможность добавить строку)
+
+"insertBefore (elem[5], elem[1])" - перемещает элементы (первый аргумент - что перемещаем, второй - элемент перед
+которым. Современный метод "before"
+идет перемещение)
+
+"replaceChild(elem[5], elem[1])" - 5 элемент встает вместо 1-го, а 1-й исчезает из верстки. Современный метод -
+"replaceWith"
+
+"removeChild(elem[5])" - удаление элемента 5-го. Современная замена - "remove"
+</pre>
+<div>
+<h2>===УРОК 11 ===</h2>
+</div>
+
+js очень часто используется для редактирования интрерфейса <br>
+плюс когда нужна реакция (отработка функции) на некоторые действия пользователя <br>
+
+<h3>
+    Действия пользователя: <br>
+</h3>
+<li>Клик по кнопке</li>
+<li>Наведение курсора на определенное место на странице </li>
+<li>Сужение или расширение нашего экрана</li>
+<li>Клик по любой ссылке</li>
+<li>Отправка формы</li>
+<li>Любой ввод\вывод информации</li>
+
+<h3>Как мы можем перехватывать действия пользователя:</h3>
+
+<ol>
+    Атрибут на самом элементе (старый способ)
+  пример:
+  <div>
+        <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">&lt;div <span class="hljs-class"><span class="hljs-keyword" style="font-weight: 700;">class</span></span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"controls"</span>&gt;
+
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name" style="font-weight: 700;">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"alert('Клик по кнопке')"</span> <span class="hljs-attr">id</span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"btn"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name" style="font-weight: 700;">button</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name" style="font-weight: 700;">cite</span>&gt;</span></span>
+        &lt;< class="hljs-regexp" style="color: rgb(188, 96, 96);">/div&gt;</
+
+Плохая традиция хранить процедуры в HTML, лучше это делать в отдельном js - файле <br>
+Ту же кнопку мы можем выцепить через id в js - файле 
+====== <br>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">const</span> btn = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">document</span>.getElementById(<span class="hljs-string" style="color: rgb(136, 0, 0);">'btn'</span>) 
+    btn.onclick = <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">function</span>(<span class="hljs-params"></span>) </span>{ 
+    alert(<span class="hljs-string" style="color: rgb(136, 0, 0);">'клик по кнопке!'</span>) 
+    } </pre>
+
+    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">Если</span> вывести переменную btn в console.dir, то увидим, что атрибут <span class="hljs-string" style="color: rgb(136, 0, 0);">"onclick"</span> обозначен как <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">функция</span> </span></pre>
+
+Ищем квадрат
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-comment" style="color: rgb(136, 136, 136);">//ищем квадрат</span>
+    <span class="hljs-keyword" style="font-weight: 700;">const</span> square = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">document</span>.getElementById(<span class="hljs-string" style="color: rgb(136, 0, 0);">'square'</span>)
+    <span class="hljs-comment" style="color: rgb(136, 136, 136);">//создаем функкцию клика</span>
+    <span class="hljs-keyword" style="font-weight: 700;">const</span> logger = <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">console</span>.log(<span class="hljs-string" style="color: rgb(136, 0, 0);">'клик по квадрату!'</span>)
+    }
+    <span class="hljs-comment" style="color: rgb(136, 136, 136);">//навешиваем функцию на клик по квадрату</span>
+    square.onclick = logger
+    
+    <span class="hljs-built_in" style="color: rgb(57, 115, 0);">console</span>.dir(square) </pre>
+</div>
+<pre>
+    В консоли находим элемент square и активируя его, справа на вкладке Event Listeners (его надо обновлять вручную видим список событий, включая "click"
+    мы увидим, что имено в свойстве <strong>handler</strong> храниться функция/
+    Если навесить на квадрат, еще одну функцию "logger1", например, то увидим, что в консоли на объекте <strong>square</strong> в свойстве onclick отобразиться только одна функция и это будет наша последняя "logger1"
+
+    const logger = function() {
+        console.log('клик по квадрату!')
+        }
+    const logger1 = function() {
+        console.log('клик по квадрату!!!')
+        }
+    //навешиваем функцию на клик по квадрату
+    square.onclick = logger
+    square.onclick = logger1
+    
+    console.dir(square)
+
+<strong>// то, что видим в консоли</strong>
+    onclick: ƒ ()
+arguments: null
+caller: null
+length: 0
+<STRong>name: "logger1"</STRong>
+
+
+НО ЕСТЬ СПОСОБ, КАК ЗАПУСТИТЬ 2 функции: ЗАПИШЕМ ONCKLICK В АНОНИМНУЮ ФУНКЦИЮ, 
+КОТОРАЯ И БУДЕТ ВЫЗЫВАТЬ 2 ДРУГИЕ
+
+square.onclick = function(){
+    logger()
+    logger1()
+}
+<strong>в этом случае в консоли мы увидим:</strong>
+div#square
+script.js:5 клик по квадрату!
+script.js:8 клик по квадрату!!!
+
+НО ВНУТРИ СВОЙСТВА ONCLICK ПО ПРЕЖНЕМУ БУДЕТ ХРАНИТЬСЯ ОДНО ЗНАЧЕНИЕ
+- ИМЯ АНОНИМНОЙ ФУНКЦИИ
+
+onclick: ƒ ()
+arguments:null
+caller: null
+length: 0
+<strong>name: ""</strong>
+08:30 - далее в тетради
+//значение функции и события oncklick можно обновить
+square.onclick = null
+
+и далее снова навесить другую функцию
+square.onclick = function() {
+    logger()
+} 
+
+
+Так же можем использовать: addEventListener
+const square = document.getElementById('square')
+//создаем функцию клика
+const logger = function() {
+    console.log('клик по квадрату!')
+    }
+
+square.addEventListener('click', logger )
+// у него 2 агрумента, где мы записываем событие и функцию, привязанную к нему
+
+в консоли получаем: 
+клик по квадрату!
+
+так же можно функцию включить прямо в МЕТОД addEventListener:
+
+//ищем квадрат
+const square = document.getElementById('square')
+//создаем функцию клика
+square.addEventListener('click', function() {
+    console.log('Клик по квадрату');
+})
+
+// и.. результат будет тот же...
+
+==..НУ И НАВЕСИВ СРАЗУ 3 СОБЫТИЯ НА ОДИН КЛИК...
+
+//ищем квадрат
+const square = document.getElementById('square')
+//создаем функцию клика
+square.addEventListener('click', function() {
+    console.log('Клик по квадрату');
+})
+
+square.addEventListener('click', function() {
+    console.log('Клик по квадрату1');
+    
+})
+
+square.addEventListener('click', function() {
+    console.log('Клик по квадрату2');
+})
+
+<STRONg>МЫ ПОЛУЧИМ СРАЗУ 3 СОБЫТИЯ В КОНСОЛИ ПОСЛЕ 1 КЛИКА ПО КВАДРАТУ</STRONg>
+
+script.js:5 Клик по квадрату
+script.js:9 Клик по квадрату1
+script.js:14 Клик по квадрату2
+
+И В БРАУЗЕРЕ (СР. Element/на <div id="square"> \ Event Listeners) уже забито 3 
+    события вместо одного в под событием click
+   <strong>НА САМОМ ДЕЛЕ НА МЕТОД addEventListener МОЖНО ПОВЕСИТЬ БОЛЬШОЕ КОЛИЧЕСТВО ФУНКЦИЙ</strong> 
+
+   \\ Так же можно остановить работу метода addEventListener методом removeEventListener
+
+   const square = document.getElementById('square')
+//создаем функцию клика
+const logger = function() {
+    console.log('клик по квадрату!')
+    }
+    
+    square.addEventListener('click', logger )
+    square.removeEventListener('click', logger )
+
+    после этого и консоль и другие фиксаторы событий будут чисты
+
+    ===НЮАНС - если прописать анонимную функция, то в данном методе она удаляться не будет. Удаляться могут только функции с именем
+
+    const square = document.getElementById('square')
+//создаем функцию клика
+const logger = function() {
+    console.log('клик по квадрату!')
+    }
+    
+    square.addEventListener('click', function() {
+        console.log('клик по квадрату2!')
+        })
+   square.removeEventListener('click', logger )
+
+   В КОНСОЛИ, НЕСМОТРЯ НА <STROng>removeEventListener</STROng> мы получим:
+   клик по квадрату2!
+====ОБЪЕКТ EVENT
+//ищем квадрат
+const square = document.getElementById('square')
+
+let counter = 0
+
+
+//создаем функцию клика
+const logger = function(event) {
+   console.log(event);
+    }
+    
+    square.addEventListener('click', logger)
+
+Очень много чего мы увидим в консоли
+
+altKey: false - зажата ли кнопка alt
+ctrlKey: false - зажата ли клавиша ctrl
+target: button#e_btn - свойство нашей цели, по которой мы кликали
+
+//координаты нашего клика:
+movementX:0
+movementY: 0
+offsetX: 42
+offsetY: 33
+pageX: 662
+
+type: "click" - тип нашего события
+
+Добавим на наш квадрат еще 3 обработчика события:
+
+square.addEventListener('click', logger)
+square.addEventListener('mouseup', logger)
+square.addEventListener('mousedown', logger)
+square.addEventListener('mousemove', logger)
+
+Проведем несколько раз по квадрату и получиммного раз обьект - событие, у которого
+type: "mousemove" - тип события mousemove 
+
+Если в консоль выводить event.type, получим
+
+143 mousemove
+
+Если зажать левую кнопку и подвигать мышь, то получим:
+
+script.js:9 mousedown
+script.js:9 mousemove
+script.js:9 mouseup
+script.js:9 click
+
+так же введем взамен изученным новые методы
+square.addEventListener('mouseenter', logger)
+square.addEventListener('mouseleave', logger)
+
+
+script.js: mouseenter //получим в консоле при нахождении курсора внутри квадрата
+script.js:9 mouseleave //получим в консоле при выходе из квадрата
+
+square.addEventListener('mouseover', logger)
+square.addEventListener('mouseout', logger)
+
+Разница перечисленных выше пар:
+Если mouseover и mouseout будут так же реагировать (срабатывать) на вложенные элементы,
+то mouseenter и mouseleave будут работать только на границах квадрата (или того элемента, на который наложены данные методы)
+
+
+===РАБОТА С ТЕКСТОВЫМ ИНПУТОМ==
+
+У него в верстке есть идентификатор text
+const square = document.getElementById('text')
+
+
+//создаем функцию клика
+const logger = function(event) {
+   console.log(event.type);
+    }
+    
+  text.addEventListener('input', logger)
+  
+--введем в текстовое поле слово text
+
+в итоге, в консоли получим:
+  4 input - функция logger отработает 4 раза
+  так же input будет срабатывать на удаление, вставку элементов
+  то есть от количества символов не зависит от длины текста, а зависит от количества событий с этим полем
+
+  text.addEventListener('input', logger)
+  text.addEventListener('focus', logger) - //focus - добавили обработчик с событием фокус
+  в консоли получим:
+  script.js:7 focus
+2script.js:7 input
+
+text.addEventListener('blur', logger)  - // blur - срабатывает, когда фокус убираем из поля
+
+text.addEventListener('change', logger) - //change - отрабатывает, когда значение данного инпута будет изменено
+
+Если изменить параметра вывода функции logger (console.dir(event.target) )
+
+const logger = function(event) {
+    console.dir(event.target);
+     }
+
+     в значении value мы найдем наш вводимый в текстовое поле текст
+     опять измееним параметры вывода:
+     console.dir(event.target.value);
+==ПОЛУЧИМ В КОНСОЛИ:
+
+script.js:7 s
+script.js:7 sd
+script.js:7 sdf
+script.js:7 sdfs
+script.js:7 sdfss
+script.js:7 sdfssd
+5script.js:7 sdfssdf
+
+<h2> keyup и keydown - нажатие и отпускание клвишы</h2>
+text.addEventListener('keyup', logger)
+text.addEventListener('keydown', logger)
+
+<h2> РАБОТА С ПОЛОЗКОМ (ДИАПАЗОНОМ)</h2>
+const range = document.getElementById('range')
+const span = document.getElementById('range-span')
+
+
+//создаем функцию клика
+const logger = function(event) {
+   console.dir(event.type);
+   span.textContent = event.target.value
+    }
+    
+  range.addEventListener('input', logger)
+  range.c('change', logger)
+
+  ===
+  Так же можно вешать событития на элементы напрямую (то есть без создания лишних переменных):
+  document.getElementById('range').addEventListener('change', logger)
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM построен');
+    //раньше использовалась вместо атрибуту defer
+    //Атрибут defer указывает браузеру отложить выполнение скрипта до тех пор, пока не будет завершен разбор HTML-документа. Это позволяет браузеру продолжать отображать содержимое страницы без задержек из-за ожидания скрипта
+  ====
+    window.onbeforeunload = function () {
+        return 'Вы хотите уйти со страницы?'
+      }
+
+<> описаный выше метод раньше любили вставить для предупреждения при уходе из окна или страницы. Сейчас его блокируют все современные браузеры. Сейчас это выражается в появлении окна ПЕРЕЗАГРУЗИТЬ САЙТ <br> Изменения могут не сохраниться.</strong>
+
+===<h2>РАБОТО СО ССЫЛКАМИ</h2>
+
+//Пример кода:
+
+//работа со ссылками
+
+const link = document.querySelector('a')
+link.addEventListener('click', function(event) {
+  event.preventDefault()
+console.log('клик по ссылке')
+})
+
+//ink.addEventListener('click', function(event) {
+    event.preventDefault() - позволяет заблокировать переход на страницу при нажатии на ссылку. Только в консоли появится "4script.js:6 клик по ссылке"
+
+    ===БЛОКИРОВКА ОТКРЫТИЯ МЕНЮ ПРАВОЙ МЫШЬЮ
+
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault()
+        console.log('Где меню?')
+===<STRONG>ВСПЛЫТИЕ И ПЕРЕХВАТ</STRONG>
+
+
+
+</pre>
+
+
