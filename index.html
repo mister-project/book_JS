@@ -1,4 +1,18 @@
-<pre>/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book_JS</title>
+    <script src="./contents.js" defer></script>
+</head>
+
+<body>
+
+    <div id="contents"></div>
+
+    <pre>/
 ==<h2>КОМАНДЫ ДЛЯ РАБОТЫ С GIT</h2> ==
 <li>git init folder-name — создает репоизторий в папке folder-name. <strong> У файлов в папке появляется значок "U"</strong></li>
 <li>git add <путь до файла> — изменить статус файла на отслеживаемый
@@ -69,30 +83,31 @@ title.insertAdjacentHTML('beforeend', '<span>step 4</span>')
 
 "removeChild(elem[5])" - удаление элемента 5-го. Современная замена - "remove"
 </pre>
-<div>
-<h2>===УРОК 11 ===</h2>
-</div>
+    <div>
+        <h2>===УРОК 11 ===</h2>
+    </div>
 
-js очень часто используется для редактирования интрерфейса <br>
-плюс когда нужна реакция (отработка функции) на некоторые действия пользователя <br>
+    js очень часто используется для редактирования интрерфейса <br>
+    плюс когда нужна реакция (отработка функции) на некоторые действия пользователя <br>
 
-<h3>
-    Действия пользователя: <br>
-</h3>
-<li>Клик по кнопке</li>
-<li>Наведение курсора на определенное место на странице </li>
-<li>Сужение или расширение нашего экрана</li>
-<li>Клик по любой ссылке</li>
-<li>Отправка формы</li>
-<li>Любой ввод\вывод информации</li>
+    <h3>
+        Действия пользователя: <br>
+    </h3>
+    <li>Клик по кнопке</li>
+    <li>Наведение курсора на определенное место на странице </li>
+    <li>Сужение или расширение нашего экрана</li>
+    <li>Клик по любой ссылке</li>
+    <li>Отправка формы</li>
+    <li>Любой ввод\вывод информации</li>
 
-<h3>Как мы можем перехватывать действия пользователя:</h3>
+    <h3>Как мы можем перехватывать действия пользователя:</h3>
 
-<ol>
-    Атрибут на самом элементе (старый способ)
-  пример:
-  <div>
-        <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">&lt;div <span class="hljs-class"><span class="hljs-keyword" style="font-weight: 700;">class</span></span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"controls"</span>&gt;
+    <ol>
+        Атрибут на самом элементе (старый способ)
+        пример:
+        <div>
+            <pre class="hljs"
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">&lt;div <span class="hljs-class"><span class="hljs-keyword" style="font-weight: 700;">class</span></span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"controls"</span>&gt;
 
             <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name" style="font-weight: 700;">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"alert('Клик по кнопке')"</span> <span class="hljs-attr">id</span>=<span class="hljs-string" style="color: rgb(136, 0, 0);">"btn"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name" style="font-weight: 700;">button</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name" style="font-weight: 700;">cite</span>&gt;</span></span>
         &lt;< class="hljs-regexp" style="color: rgb(188, 96, 96);">/div&gt;</
@@ -105,11 +120,13 @@ js очень часто используется для редактирова�
     alert(<span class="hljs-string" style="color: rgb(136, 0, 0);">'клик по кнопке!'</span>) 
     } </pre>
 
-    <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">Если</span> вывести переменную btn в console.dir, то увидим, что атрибут <span class="hljs-string" style="color: rgb(136, 0, 0);">"onclick"</span> обозначен как <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">функция</span> </span></pre>
+            <pre class="hljs"
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-keyword" style="font-weight: 700;">Если</span> вывести переменную btn в console.dir, то увидим, что атрибут <span class="hljs-string" style="color: rgb(136, 0, 0);">"onclick"</span> обозначен как <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">функция</span> </span></pre>
 
-Ищем квадрат
+            Ищем квадрат
 
-<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-comment" style="color: rgb(136, 136, 136);">//ищем квадрат</span>
+            <pre class="hljs"
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span class="hljs-comment" style="color: rgb(136, 136, 136);">//ищем квадрат</span>
     <span class="hljs-keyword" style="font-weight: 700;">const</span> square = <span class="hljs-built_in" style="color: rgb(57, 115, 0);">document</span>.getElementById(<span class="hljs-string" style="color: rgb(136, 0, 0);">'square'</span>)
     <span class="hljs-comment" style="color: rgb(136, 136, 136);">//создаем функкцию клика</span>
     <span class="hljs-keyword" style="font-weight: 700;">const</span> logger = <span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">function</span>(<span class="hljs-params"></span>) </span>{
@@ -119,8 +136,8 @@ js очень часто используется для редактирова�
     square.onclick = logger
     
     <span class="hljs-built_in" style="color: rgb(57, 115, 0);">console</span>.dir(square) </pre>
-</div>
-<pre>
+        </div>
+        <pre>
     В консоли находим элемент square и активируя его, справа на вкладке Event Listeners (его надо обновлять вручную видим список событий, включая "click"
     мы увидим, что имено в свойстве <strong>handler</strong> храниться функция/
     Если навесить на квадрат, еще одну функцию "logger1", например, то увидим, что в консоли на объекте <strong>square</strong> в свойстве onclick отобразиться только одна функция и это будет наша последняя "logger1"
@@ -429,6 +446,12 @@ console.log('клик по ссылке')
 
 
 
+
+<h2>ПОРТФОЛИО</h2>
+портфолио и по сей день актуально
+
 </pre>
+</body>
 
 
+</html>
