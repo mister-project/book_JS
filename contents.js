@@ -11,5 +11,5 @@ hTwo.forEach(e => {
 })
 
 // превращаем массив в строку, удаляем запятые, вставляем на страницу
-console.log(arr.toString().replace(/[\s.,%]/g, ''))
-contents.innerHTML = arr.toString().replace(/[\s.,%]/g, '')
+
+contents.innerHTML = arr.toString().replace(/[\,]/g, '')
