@@ -5,13 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>book_JS</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./contents.js" defer></script>
     <!-- <script src="./script2.js" defer></script> -->
+    <!-- <style>
+        #toc {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style> -->
 </head>
 
 <body>
 
     <div id="contents"></div>
+    <div id="toc"></div>
 
     <pre>/
 ==<h2>КОМАНДЫ ДЛЯ РАБОТЫ С GIT</h2> ==
@@ -449,9 +462,13 @@ console.log('клик по ссылке')
 
 __proto__ - обращение к вложенному прототипу конструктора
 
-hasOwnProperty - метод, позволяющий определить есть ли у объкта такое свойство
+hasOwnProperty - булевый метод, позволяющий определить есть ли у объкта такое свойство
 
 __proto__.__proto__.hasOwnProperty - поиск свойства в прототипе с двойной вложенностью
+
+(frontEndDev.isPrototypeOf(developer1));
+isPrototypeOf - булевый метод, подсказывает создан ли объект developer1 
+на основании прототипа из объекта frontEndDev
 
 
 <h2>ПОРТФОЛИО</h2>

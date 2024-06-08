@@ -1,15 +1,28 @@
 console.log('скрипт в работе')
-const hTwo = document.querySelectorAll('h2')
+const hTwo = document.querySelectorAll('h2, h3, h4')
 const contents = document.querySelector('#contents');
 let arr = []
 console.log()
 
 //формируем массив 
-hTwo.forEach(e => {
-    arr.push(`${e.innerHTML} <br>`)
+hTwo.forEach((e, index) => {
+    e.setAttribute('id', index)
 
 })
 
-// превращаем массив в строку, удаляем запятые, вставляем на страницу
 
-contents.innerHTML = arr.toString().replace(/[\,]/g, '')
+const toc = document.getElementById('toc');
+const headings = document.querySelectorAll('h2, h3, h4');
+
+headings.forEach((heading) => {
+    const link = document.createElement('a');
+    link.textContent = heading.textContent;
+    link.setAttribute('href', `#${heading.id}`);
+
+    const listItem = document.createElement('li');
+    listItem.appendChild(link);
+
+    toc.appendChild(listItem);
+});
+
+// toc.style.display = 'none'

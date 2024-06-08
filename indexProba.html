@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents</title>
+    <style>
+        #toc {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="toc"></div>
+
+    <h2 id="section1">Section 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <h3 id="subSection1">Subsection 1.1</h3>
+    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <h4 id="subSubSection1">Subsubsection 1.1.1</h4>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <h2 id="section2">Section 2</h2>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+    <h3 id="subSection2">Subsection 2.1</h3>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <script>
+        const toc = document.getElementById('toc');
+        const headings = document.querySelectorAll('h2, h3, h4');
+
+        headings.forEach((heading) => {
+            const link = document.createElement('a');
+            link.textContent = heading.textContent;
+            link.setAttribute('href', `#${heading.id}`);
+
+            const listItem = document.createElement('li');
+            listItem.appendChild(link);
+
+            toc.appendChild(listItem);
+        });
+    </script>
+</body>
+
+</html>
