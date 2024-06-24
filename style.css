@@ -1,9 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/* * {
+    /* margin: 0; */
+/* padding: 0;
+} */
 
-#toc {
+*/ #toc {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -13,8 +13,8 @@
     border-radius: 5px;
 }
 
-.ol {
+/* .ol {
     padding: 0;
     margin: 0;
     /* Убираем отступы у списка */
-}
+/* } */
