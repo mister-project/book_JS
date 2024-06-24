@@ -19,13 +19,18 @@
             border-radius: 5px;
         }
     </style> -->
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            /* Убираем отступы у списка */
+        }
+    </style>
 </head>
 
 <body>
-
     <div id="contents"></div>
     <div id="toc"></div>
-
     <pre>/
 <h1>HTML</h1>
 <h2>Работа с VS Code</h2>
@@ -105,8 +110,27 @@
 
     </form>
     
-
-
+<h2>Атрибуты тэгов + СLASS И id </h2>
+Возьмем, к примеру тэг 
+div и добавим атрибуты hidden и title
+<xmp>
+    <div hidden = "hidden">
+    <div title = "hidden" style="margin: 0;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vel?
+    </div>
+    Так же мы часто используем атрибуты class и id, имеющие более широкое применение
+    <div class="123" id="123">
+        
+    </div>    
+</xmp>
+<p style="color: red; margin: 0px; border: 0px;padding: 0;">!!!</p>
+<div>
+    
+   
+    <li style="margin: 0;">class и id могут совпадать</li>
+    <li>id никогда не повторяется</li>
+    <li>в одном атрибуте через пробел может быть записано несколько классов, например: <div class="class1 class2"></div></li>
+</ol>
+</div>
 
 ==<h2>КОМАНДЫ ДЛЯ РАБОТЫ С GIT</h2> ==
 <li>git init folder-name — создает репоизторий в папке folder-name. <strong> У файлов в папке появляется значок "U"</strong></li>
