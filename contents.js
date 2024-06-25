@@ -26,3 +26,10 @@ headings.forEach((heading) => {
 });
 
 // toc.style.display = 'none'
+
+const btn1 = document.querySelector('#btn1')
+console.dir(toc)
+btn1.addEventListener('click', (e) => {
+    toc.style.display = 'none';
+
+})
