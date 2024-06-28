@@ -135,7 +135,7 @@ div и добавим атрибуты hidden и title
 </div>
 
 <h2>CSS селекторы</h2>
-<h3>Терминология</h3>
+<h3>CSS Терминология</h3>
 <xmp>В записи css- файла:
 * {
     color: red;
@@ -210,7 +210,7 @@ color: blue;
     Если идет 3 значения, например "border-radius: 10px 20px 30px", то 10 - левый верхний, 20 - правый верхний и левый нижний, 30 - правый нижний
     Если 4 значения, "border-radius: 10px 20px 30px 40px", то распределение идет по часовой стрелке, начиная с левого верхнего угла. 
 
- <h2>Размеры элементов</h2>   
+ <h2>CSS Размеры элементов</h2>   
  <xmp>
 .logo {
        
@@ -227,7 +227,48 @@ color: blue;
 
 <b>Примечание:</b> проконтролировать размеры можно в инструментах разработчика (F12)
 
+<h2>CSS Шрифты</h2>
+Пример
+<xmp>
+    p{
+        font-family: serif; (с засечками внизу букв)
+        <!-- или  -->
+        font-family: sans-serif; (без засечек)
+        font-family: monospace; - каждый символ имеет одинаковую ширину (моношринный)
+        font-size: 15px; (fz15) - размер шрифта
 
+ Ширину можно задавать словами или цифрами (100-900)
+        font-weight: lighter; - тонкая ширина (100) - (fwl)
+        font-weight: normal; - нормальная ширина (400) - (fwn)
+        font-weight: bold; - широкая ширина (700) - (fwb)
+        font-weight: bolder; - широчайшая ширина (900)
+
+        line-height: 30px; - задание межстрочного интервала
+
+Выравнивание текста:
+        text-align: center;
+        text-align: left;
+        text-align: right;
+        text-align: justify; - распределение по ширине
+
+Подчеркивания:
+        text-decoration: underline; - снизу
+        text-decoration: overline; - сверху
+        text-decoration: line-through; - зачеркивание
+        text-decoration: none; - убирает Подчеркивания (используется, например чтобы убрать подчеркивание у ссылок)
+
+Текст-Трансформ:
+        text-transform: uppercase; - все символы заглавные
+        text-transform: lowercase; - все символы строчные
+        text-transform: capitalize;  - каждое слово с заглавной буквы
+    }
+</xmp>
+<b>Настройка шрифта у списка</b>
+<xmp>
+    ul {
+        list-style: none; - так убираем точки у пунктов списка и далее можно использовать для построения меню
+    }
+</xmp>
 
 ==<h2>КОМАНДЫ ДЛЯ РАБОТЫ С GIT</h2> ==
 <li>git init folder-name — создает репоизторий в папке folder-name. <strong> У файлов в папке появляется значок "U"</strong></li>
@@ -761,6 +802,9 @@ isPrototypeOf - булевый метод, подсказывает создан
 <h2>Курсы Исмаила Усеинова</h2>
 <a href="https://stepik.org/users/387773773/teach">ФСЕ Курсы Исмаила Усеинова</a>
 
+<h2>Публикация проекта на GitPages</h2>
+<a href="https://www.labwebs.ru/100_soft/2_sborka/1_Webpack/3_deploy/1_state/1_state.php">Ссылка на инструкцию 1 Для WebPack (текст)</a>
+<a href="https://www.youtube.com/watch?v=IfBhttjIDUc">Видео-инструкция</a>
 </body>
 
 

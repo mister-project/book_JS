@@ -14,9 +14,15 @@
     display: block;
 }
 
-/* .logo{
-    
-} */
+.logo {
+    border: 1px solid black;
+    border-top-width: 20px;
+    text-transform: uppercase;
+    - все символы заглавные text-transform: lowercase;
+    - все символы строчные text-transform: capitalize;
+    - каждое слово с заглавной буквы
+}
+
 /* .ol {
     padding: 0;
     margin: 0;
