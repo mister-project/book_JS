@@ -269,6 +269,43 @@ color: blue;
         list-style: none; - так убираем точки у пунктов списка и далее можно использовать для построения меню
     }
 </xmp>
+<h2> CSS - БЛОЧНАЯ МОДЕЛЬ</h2>
+<xmp>
+    <!-- HTML -->
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    
+    <!-- css -->
+
+    .box{ 
+        box-sizing: border-box; 
+        } -  держит размеры блока в рамках указнных ниже , 
+         не смотря на padding и border - ЭТУ НАСТРОЙКУ ЧАСТО 
+         УКАЗЫВАЮТ В САМОМ ВЕРХУ ДЛЯ ВСЕХ БЛОКОВ, ПРИМЕР:
+         *{
+        box-sizing: border-box;     
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+    }
+    .box1 {
+        background-color: rgb(212, 91, 91);
+
+        margin: 10px 40px 20px 30px; - меняет отступы снаружи 
+        распределяется по часовой стрелке, начиная сверху 
+        
+        padding: 15px; - можно настроить отдельно для 
+        каждой стороны, например :
+        padding-top: 10px;    (pt10)
+        или 
+        margin-left: 15px;    (pt15)
+    }
+    .box2 {
+        background-color: rgb(91, 143, 212);
+        margin: 10px;
+    }
+</xmp>
 
 ==<h2>КОМАНДЫ ДЛЯ РАБОТЫ С GIT</h2> ==
 <li>git init folder-name — создает репоизторий в папке folder-name. <strong> У файлов в папке появляется значок "U"</strong></li>
