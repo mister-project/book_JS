@@ -1,26 +1,28 @@
-/* * {
-    /* margin: 0; */
-/* padding: 0;
-} */
+* {
+  margin: 0;
+  padding: 0 10px;
+}
 
 #toc {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #f8f8f8;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
 }
 
 .logo {
-    border: 1px solid black;
-    border-top-width: 20px;
-    text-transform: uppercase;
-    - все символы заглавные text-transform: lowercase;
-    - все символы строчные text-transform: capitalize;
-    - каждое слово с заглавной буквы
+  border: 1px solid black;
+  border-top-width: 20px;
+  text-transform: uppercase;
+  /* - все символы заглавные  */
+  text-transform: lowercase;
+  /* - все символы строчные  */
+  text-transform: capitalize;
+  /* - каждое слово с заглавной буквы */
 }
 
 /* .ol {
@@ -28,3 +30,23 @@
     margin: 0;
     /* Убираем отступы у списка */
 /* } */
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+xmp {
+  color: green;
+  font-weight: 20px;
+  padding: 0;
+}
+li {
+  text-transform: uppercase;
+}
+.red {
+  color: red;
+}
+
+li .red {
+  color: red;
+}

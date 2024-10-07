@@ -1,4 +1,5 @@
 console.log('скрипт в работе')
+
 const hTwo = document.querySelectorAll('h2, h3, h4')
 const contents = document.querySelector('#contents');
 let arr = []
