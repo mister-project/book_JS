@@ -30,11 +30,11 @@
 </head>
 
 <body>
-<div id="contents"></div>
-<div id="toc">
-    <input type="button" value="X" id="btn1">
-</div>
-<pre>/
+    <div id="contents"></div>
+    <div id="toc">
+        <input type="button" value="X" id="btn1">
+    </div>
+    <pre>/
 <h1>HTML</h1>
 <h2>Работа с терминалом</h2>
 <h5>Команда для терминала с переходом в другую папку на ПК</h5>
@@ -58,6 +58,12 @@
 <iframe width="720" height="405"
         src="https://rutube.ru/play/embed/f186f18e77e8bf94a0d80b5494b6a02b/?p=sns8p_hm2qrh-jVwDMG1-Q" frameBorder="0"
         allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<!-- Работа с Figma -->
+
+<h2>Работа с FIGMA</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RW4I2rJFMNw?si=2EqPMbvhqXyJtsFV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
     <!-- РАБОТА С VS CODE _ НАЧАЛО -->
@@ -521,31 +527,31 @@ title.insertAdjacentHTML('beforeend', '<span>step 4</span>')
 
 "removeChild(elem[5])" - удаление элемента 5-го. Современная замена - "remove"
 </pre>
-<div>
-    <h2>===JS - УРОК 11 ===</h2>
-</div>
-
-js очень часто используется для редактирования интрерфейса <br>
-плюс когда нужна реакция (отработка функции) на некоторые действия пользователя <br>
-
-<h3>
-    Действия пользователя: <br>
-</h3>
-<li>Клик по кнопке</li>
-<li>Наведение курсора на определенное место на странице</li>
-<li>Сужение или расширение нашего экрана</li>
-<li>Клик по любой ссылке</li>
-<li>Отправка формы</li>
-<li>Любой ввод\вывод информации</li>
-
-<h3>JS - Как мы можем перехватывать действия пользователя:</h3>
-
-<ol>
-    Атрибут на самом элементе (старый способ)
-    пример:
     <div>
+        <h2>===JS - УРОК 11 ===</h2>
+    </div>
+
+    js очень часто используется для редактирования интрерфейса <br>
+    плюс когда нужна реакция (отработка функции) на некоторые действия пользователя <br>
+
+    <h3>
+        Действия пользователя: <br>
+    </h3>
+    <li>Клик по кнопке</li>
+    <li>Наведение курсора на определенное место на странице</li>
+    <li>Сужение или расширение нашего экрана</li>
+    <li>Клик по любой ссылке</li>
+    <li>Отправка формы</li>
+    <li>Любой ввод\вывод информации</li>
+
+    <h3>JS - Как мы можем перехватывать действия пользователя:</h3>
+
+    <ol>
+        Атрибут на самом элементе (старый способ)
+        пример:
+        <div>
             <pre class="hljs"
-                 style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">&lt;div <span
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">&lt;div <span
                     class="hljs-class"><span class="hljs-keyword" style="font-weight: 700;">class</span></span>=<span
                     class="hljs-string" style="color: rgb(136, 0, 0);">"controls"</span>&gt;
 
@@ -571,16 +577,16 @@ js очень часто используется для редактирова�
     alert(<span class="hljs-string" style="color: rgb(136, 0, 0);">'клик по кнопке!'</span>) 
     } </pre>
 
-        <pre class="hljs"
-             style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span
+            <pre class="hljs"
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span
                 class="hljs-keyword" style="font-weight: 700;">Если</span> вывести переменную btn в console.dir, то увидим, что атрибут <span
                 class="hljs-string" style="color: rgb(136, 0, 0);">"onclick"</span> обозначен как <span
                 class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">функция</span> </span></pre>
 
-        Ищем квадрат
+            Ищем квадрат
 
-        <pre class="hljs"
-             style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span
+            <pre class="hljs"
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"><span
                 class="hljs-comment" style="color: rgb(136, 136, 136);">//ищем квадрат</span>
     <span class="hljs-keyword" style="font-weight: 700;">const</span> square = <span class="hljs-built_in"
                                                                                      style="color: rgb(57, 115, 0);">document</span>.getElementById(<span
@@ -596,8 +602,8 @@ js очень часто используется для редактирова�
     square.onclick = logger
     
     <span class="hljs-built_in" style="color: rgb(57, 115, 0);">console</span>.dir(square) </pre>
-    </div>
-    <pre>
+        </div>
+        <pre>
     В консоли находим элемент square и активируя его, справа на вкладке Event Listeners (его надо обновлять вручную видим список событий, включая "click"
     мы увидим, что имено в свойстве <strong>handler</strong> храниться функция/
     Если навесить на квадрат, еще одну функцию "logger1", например, то увидим, что в консоли на объекте <strong>square</strong> в свойстве onclick отобразиться только одна функция и это будет наша последняя "logger1"
@@ -1071,7 +1077,7 @@ https://beget.com
         href="https://club.dns-shop.ru/blog/t-417-operatsionnyie-sistemyi/110218-kak-otkluchit-obnovleniya-windows-11/?utm_referrer=https%3A%2F%2Fwww.google.com%2F">Варианты откл-я обновл-я</a>
         
 </pre>
-    <p></p>
+        <p></p>
 </body>
 
 </html>
