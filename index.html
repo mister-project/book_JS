@@ -962,7 +962,7 @@ isPrototypeOf - булевый метод, подсказывает создан
    <xmp>npm install</xmp>
 
 
-<h2>VUE</h2> 
+<h2>VUE.js</h2> 
 
 <xmp>
     vue create 'project' - команда для создания нового проекта
@@ -972,8 +972,69 @@ isPrototypeOf - булевый метод, подсказывает создан
     npm i - загрузка необходимых библиотек, типа 'node_modules'
 </xmp>
 
+<h2>Vue-CLI, router, vuex</h2>
 
-   
+<a href="https://cli.vuejs.org/ru/">ДОКУМЕНТАЦИЯ: Установка CLI</a>
+Библиотека для компиляции приложения - есть русская документация
+<>
+npm install -g @vue/cli - комнда для установки - для Локальной установки открыть терминал в папке и ввести команду
+vue --version - команда для проверки версии установленной vue cli
+</xmp> 
+<a href="https://vue-router-ru.netlify.app/">Русская документация по Vue Router</a>
+
+<xmp>
+npm install vue-router@3 - команда для установки 3 версии роутера - нужно для устойчивой работы Vue.js2
+</xmp>
+
+вставить в файл main.js - 
+<xmp>import VueRouter from 'vue-router'
+
+    Vue.use(VueRouter)</xmp>
+Так же в main.js нужно создать массив с маршрутами, где указать ссылки на компоненты view
+
+Например:
+
+<xmp>const router = new VueRouter({
+    mode: "history", - // удаляет '#' в адресе
+    routes: [
+      {
+        path: "/",
+        component: IndexPage,
+      },
+
+      {
+        path: "/second",
+        component: SecondPage,
+      },
+    ],
+  });
+</xmp>
++ в main.js надо подключить роутер к приложениию VUE:
+<xmp>
+new Vue({
+    router, 
+    render: (h) => h(App),
+  }).$mount("#app");
+</xmp>
+и внутри страницы App.vue в теге template прописать  <xmp>'<router-view></router-view>'</xmp>
+
+Например, так - 
+<xmp>
+    <template>
+        <div id="app">
+          <h1>Сайт Путешествий</h1>
+          <router-view></router-view>
+        </div>
+      </template>
+</xmp>
+
+<h2>Vue.JS установка Sass</h2>
+
+<xmp>
+npm install -D sass-loader@^10 sass - команда для терминала
+</xmp>
+
+
 <h2>ПОРТФОЛИО</h2>
 
 Построитель CV - <a href="https://cvbuilder.ru/" target="_blank" rel="построитель резюме">https://cvbuilder.ru/</a>
