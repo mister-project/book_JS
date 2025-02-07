@@ -1038,7 +1038,110 @@ npm install -D sass-loader@^10 sass - команда для терминала
 <xmp>
 npm install vuex@^3.4.0 --save - команда для установки
 </xmp>
-<a href="https://v3.vuex.vuejs.org/ru/#что-такое-«паттерн-управления-состоянием»">Документация - </a>
+<a href="https://v3.vuex.vuejs.org/ru/#что-такое-«паттерн-управления-состоянием»">Документация - VUEX</a>
+
+<h2>VUE-Validate</h2>
+
+<xmp>
+npm install @vuelidate/core @vuelidate/validators - установка самой библиотеки
+npm install @vue/composition-api - установка api
+import { useVuelidate } from '@vuelidate/core' - импорт1 готовой валидации - встравляется в разделе script
+import { required, email } from '@vuelidate/validators' - импорт2 готовой валидации - встравляется в разделе script 
+</xmp>
+<a href="https://vuelidate-next.netlify.app/#installation">Документация VUE-Validate</a>
+
+<pre>
+    Так же столкнулся с такой проблемой
+    Юрий Куликов, [07.02.2025 22:56]
+Здравствуйте. Вопрос такой: после установки библиотеки Vue-validate (урок 10) и попытки выполнения 
+npm run serve
+, получил 
+Vue packages version mismatch:
+
+- vue@2.6.14 (C:\Users\Uriy\Desktop\coffee-shop\node_modules\vue\dist\vue.runtime.common.js)
+- vue-template-compiler@2.7.16 (C:\Users\Uriy\Desktop\coffee-shop\node_modules\vue-template-compiler\package.json) 
+
+This may cause things to work incorrectly. Make sure to use the same version for both.
+If you are using vue-loader@>=10.0, simply update vue-template-compiler.
+If you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.
+
+Юрий Куликов, [07.02.2025 22:58]
+Это несовпадение версий пакетов. Надо ли делать то, что рекомендуется? То есть 
+re-installing vue-loader/vueify
+
+Юрий Куликов, [07.02.2025 22:58]
+Или проблема в чем-то другом может быть? Может кто-то сталкивался с таким?
+
+Александр, [07.02.2025 23:00]
+  "dependencies": {
+    "@vue/composition-api": "^1.7.2",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "core-js": "^3.8.3",
+    "seamless-scroll-polyfill": "^2.3.4",
+    "uuid": "^11.0.3",
+    "vue": "2.6.14",
+    "vue-router": "^3.6.5",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "sass": "^1.82.0",
+    "sass-loader": "^10.5.2",
+    "vue-template-compiler": "2.6.14"
+  },
+
+в package.json версии эти подставить надо и npm i написать и должно пропасть
+
+Юрий Куликов, [07.02.2025 22:56]
+Здравствуйте. Вопрос такой: после установки библиотеки Vue-validate (урок 10) и попытки выполнения 
+npm run serve
+, получил 
+Vue packages version mismatch:
+
+- vue@2.6.14 (C:\Users\Uriy\Desktop\coffee-shop\node_modules\vue\dist\vue.runtime.common.js)
+- vue-template-compiler@2.7.16 (C:\Users\Uriy\Desktop\coffee-shop\node_modules\vue-template-compiler\package.json) 
+
+This may cause things to work incorrectly. Make sure to use the same version for both.
+If you are using vue-loader@>=10.0, simply update vue-template-compiler.
+If you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.
+
+Юрий Куликов, [07.02.2025 22:58]
+Это несовпадение версий пакетов. Надо ли делать то, что рекомендуется? То есть 
+re-installing vue-loader/vueify
+
+Юрий Куликов, [07.02.2025 22:58]
+Или проблема в чем-то другом может быть? Может кто-то сталкивался с таким?
+
+Александр, [07.02.2025 23:00]
+  "dependencies": {
+    "@vue/composition-api": "^1.7.2",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "core-js": "^3.8.3",
+    "seamless-scroll-polyfill": "^2.3.4",
+    "uuid": "^11.0.3",
+    "vue": "2.6.14",
+    "vue-router": "^3.6.5",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "sass": "^1.82.0",
+    "sass-loader": "^10.5.2",
+    "vue-template-compiler": "2.6.14"
+  },
+
+в package.json версии эти подставить надо и npm i написать и должно пропасть
+
+Александр, [07.02.2025 23:07]
+<strong> 
+    npm i vue@2.6.14 vue-template-compiler@2.6.14 --save-exact 
+</strong>
+
+</pre>
 
 <h2>ПОРТФОЛИО</h2>
 
