@@ -2,8 +2,15 @@ console.log('скрипт в работе')
 
 const hTwo = document.querySelectorAll('h2, h3, h4')
 const contents = document.querySelector('#contents');
+const openModalBtn = document.querySelector('#openModal'); // Кнопка открытия модального окна
+const toc = document.getElementById('modal');
+
 let arr = []
-console.log()
+
+
+openModalBtn.addEventListener('click', () => {
+    toc.style.display = 'block';
+})
 
 //формируем массив 
 hTwo.forEach((e, index) => {
@@ -11,9 +18,8 @@ hTwo.forEach((e, index) => {
 
 })
 
-
-const toc = document.getElementById('toc');
 const headings = document.querySelectorAll('h2, h3, h4');
+console.log(headings);
 
 headings.forEach((heading) => {
     const link = document.createElement('a');
@@ -28,7 +34,7 @@ headings.forEach((heading) => {
 
 // toc.style.display = 'none'
 
-const btn1 = document.querySelector('#btn1')
+const btn1 = document.querySelector('.close')
 console.dir(toc)
 btn1.addEventListener('click', (e) => {
     toc.style.display = 'none';
