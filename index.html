@@ -45,8 +45,8 @@
             <img id="img_logo" src="./jmg/web-developer-logo.jpg" alt="" />
           </div> -->
           <div class="nav">
-            <div><span id="openModal">Открыть содержание</span></div>
-            <div><span class="close">Закрыть содержание</span></div>
+            <div><span id="openModal">СОДЕРЖАНИЕ</span></div>
+            <!-- <div><span class="close">Закрыть содержание</span></div> -->
             
           </div>
         </div>
@@ -105,14 +105,66 @@
 РЕКОМЕНДУЕМЫЕ  Плагины
 
 <xmp> 
-ESLint — https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint 
-DotENV — https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel 
-Babel JavaScript — https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel 
-Better Comments — https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments 
-indent-rainbow — https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow 
-JS Quick Console — https://marketplace.visualstudio.com/items?itemName=AhadCove.js-quick-console 
-Prettier - Code formatter — https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode 
-EditorConfig for VS Code 
+    ESLint 
+</xmp>
+    — https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint 
+     DotENV 
+    — https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel 
+    Нужен для подсветки файлов с расшиерением ‘env’ Файлы с расширением .env — это текстовые файлы, которые хранят переменные окружения в формате КЛЮЧ=значение. Они используются для конфигурирования приложений, хранения чувствительных данных (например, API-ключей, паролей) и разделения конфигурации от кода. Это повышает безопасность и гибкость, так как позволяет изменять настройки без редактирования основного кода.  
+<xmp>Babel JavaScript</xmp>
+     — https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel 
+    Подсветка css и других современных синтаксисов
+    <xmp> Better Comments</xmp>    
+     — https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments 
+    Подсветка комментариев 
+    * Оповещения
+    * Запросы
+    * Задачи
+    * Основные моменты
+    * Закомментированный код также можно стилизовать, чтобы было понятно, что его там быть не должно
+    * Любые другие стили комментариев, которые вы хотите, можно указать в настройках
+    <xmp> indent-rainbow</xmp>
+  
+     — https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow 
+    повышает читаемость кода, визуально выделяя уровни отступов разными цветами. 
+    Основные функции и особенности:
+    * Цветовая индикация отступов: Плагин раскрашивает отступы перед текстом, чередуя несколько разных цветов на каждом последующем уровне вложенности.
+    * Улучшение читаемости: Это помогает быстро и легко определить уровень вложенности кода (например, вложенность функций, операторов, HTML-тегов или блоков в Python, где отступы имеют синтаксическое значение), особенно при большой глубине кода.
+    * Поддержка разных редакторов: Доступен как расширение для VS Code (от разработчика oderwat), так и как плагин для IDE от JetBrains (например, PhpStorm, IntelliJ IDEA и других).
+    * Безопасность: Версия пакета для VS Code была проверена на наличие вредоносного ПО и считается безопасной для использования.
+    * Настраиваемость: Пользователи могут изменять цвета и внешний вид отступов в соответствии со своими предпочтениями через настройки редактора. 
+    <xmp>JS Quick Console</xmp>
+     — https://marketplace.visualstudio.com/items?itemName=AhadCove.js-quick-console 
+    предназначенное для быстрого добавления операторов console.log() в файлы JavaScript и TypeScript. 
+    
+    Основные функции и использование:
+    * Быстрая вставка console.log(): Основная цель плагина — минимизировать время, затрачиваемое на ввод операторов логирования вручную.
+    * Использование горячих клавиш:
+        * Выделите переменную или выражение в редакторе.
+        * Нажмите сочетание клавиш Ctrl+Shift+L (для Windows/Linux) или Cmd+Shift+L (для Mac).
+        * Плагин автоматически вставит строку вида console.log('ваша_переменная:', ваша_переменная); на новой строке ниже выделенного кода.
+    * Настройка сочетаний клавиш: Если стандартное сочетание конфликтует с другими расширениями или системными настройками, его можно изменить в меню "Сочетания клавиш" (Open Keyboard Shortcuts) в VS Code.
+    * Работа с типами файлов: Расширение активируется и работает только в файлах с расширениями .js и .ts. 
+    Этот плагин значительно ускоряет процесс отладки, позволяя разработчикам быстро вставлять логи для проверки значений переменных без необходимости
+    
+    <xmp>Prettier - Code formatter</xmp> 
+    — https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode 
+     автоматически приводит код к единому стилю, основываясь на заданных правилах, что упрощает чтение и поддержку кода как для индивидуальных разработчиков, так и для команд. Сам Prettier — это инструмент для автоматического форматирования кода на различных языках, включая JavaScript, TypeScript, CSS, HTML и JSON. 
+    
+    Зачем нужен плагин для Prettier
+    * Автоматическое форматирование: Плагин позволяет форматировать код как по отдельным фрагментам, так и целиком, не вручную, а с помощью заданных правил.
+    * Единый стиль: Он гарантирует, что весь код в проекте, независимо от того, кто его написал, будет выглядеть одинаково. Это особенно важно для командной работы.
+    * Концентрация на коде: Разработчик может сосредоточиться на написании кода, а не на его форматировании, так как это делает инструмент.
+    * Интеграция с IDE: Плагины обеспечивают интеграцию Prettier непосредственно в среду разработки, делая его доступным через меню или сочетания клавиш. 
+    
+    Как это работает
+    1. Установка: Устанавливается расширение Prettier в ваш редактор кода, например, расширение «Prettier — Code formatter» для VS Code.
+    2. Конфигурация: В проекте создается файл конфигурации (например, .prettierrc), где задаются правила форматирования, такие как использование одинарных или двойных кавычек, ширина отступов и другие параметры.
+    3. Применение: Плагин автоматически применяет эти правила каждый раз при сохранении файла или по команде пользователя, например, с помощью горячей клавиши или контекстного меню. 
+     for VS Code 
+     <xmp>Программа Git </xmp> 
+    — https://git-scm.com/downloads  Insomnia (необязательно) — https://insomnia.rest/pricing 
+    
 
 Программа Git — https://git-scm.com/downloads 
 Insomnia (необязательно) — https://insomnia.rest/pricing 
@@ -1240,7 +1292,7 @@ Options:
   <span class="hljs-comment">--id, -i           Set database id property (e.g. _id)         [default: "id"]</span>
   <span class="hljs-comment">--quiet, -q        Suppress log messages from output                 [boolean]</span>
  
-<br /><strong>Запуск сервера</strong><br /><br />Надо принудительно создать БД в корневом каталоге проекта <br />"C:\Users\Uriy\YandexDisk\Скриншоты\2025-02-18_16-03-31.png"<br /><img src="https://disk.yandex.ru/i/rY_cTUVICcaOmw" alt="" /><br /><br /><strong>json<span class="hljs-literal">-server</span> <span class="hljs-literal">--watch</span> db.json</strong><br /><br /><img src="&quot;C:\Users\Uriy\YandexDisk\Скриншоты\2025-02-18_16-03-31.png&quot;" alt="" /><br /><br /></code></pre>
+<br><strong>Запуск сервера</strong><br><br>Надо принудительно создать БД в корневом каталоге проекта <br>"https://disk.yandex.ru/i/rY_cTUVICcaOmw"<br><img src="https://disk.yandex.ru/i/rY_cTUVICcaOmw" alt="" ><br><br><strong>json<span class="hljs-literal">-server</span> <span class="hljs-literal">--watch</span> db.json</strong><br><br><img src="https://disk.yandex.ru/i/rY_cTUVICcaOmw" alt="" /><br><br></code></pre>
         <a href="https://my-js.org/docs/cheatsheet/json-server/" target="_blank"
             rel="noopener noreferrer">https://my-js.org/docs/cheatsheet/json-server/</a>
         - ШПАРГАЛКА
